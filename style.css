@@ -1,0 +1,586 @@
+body {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    /* background-color: #0C0C0C; */
+    background-image: linear-gradient(to left, #a625eb, #9c20e3, #931bdc, #8916d4, #8010cd, #740cbf, #6908b0, #5e05a2, #4f038a, #400274, #31015d, #240048);
+}
+
+.inner-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1280px;
+    height: 750px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.inner-wrap>div {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.inner-wrap>div video {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.inner-wrap>div:nth-child(2) {
+    border: 3px solid #1B1B1B;
+    background-color: #230944b5;
+    ;
+    padding: 50px;
+    text-align: center;
+    place-content: center;
+    overflow: auto;
+    width: 520px;
+}
+
+.waitlist-btn {
+    background-color: #5954ded9;
+    border-radius: 15px;
+    padding: 20px 5px 15px;
+    color: #9F9F9F;
+    max-width: 350px;
+    margin: 25px auto 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.inner-wrap h1 {
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.inner-wrap p {
+    color: #bcbbbb;
+}
+
+.inner-wrap p.bold {
+    margin: 17px 0 20px;
+    color: #FD01FF;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.inner-wrap p.desc {
+    font-size: 15px;
+    max-width: 420px;
+    margin: 5px auto 25px;
+    line-height: 23px;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 17px 25px 15px;
+    border-radius: 15px;
+    width: 310px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    background-color: #5714CA;
+    border: 0;
+    color: #fff;
+    font-family: "Luckiest Guy", cursive;
+    letter-spacing: 1px;
+    line-height: -1px;
+    border: 1px solid #1B1B1B;
+}
+
+input::placeholder {
+    color: #ffffff79;
+    font-family: "Luckiest Guy", cursive;
+    letter-spacing: 1px;
+}
+
+button {
+    padding: 18px 20px 15px;
+    background-color: #021248;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 15px;
+    width: 350px;
+    color: #FD01FF;
+    position: relative;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: "Luckiest Guy", cursive;
+    letter-spacing: 1px;
+}
+
+button span {
+    position: absolute;
+    top: 14px;
+    left: 211px;
+}
+
+.desc.active,
+.follow-btn, #form.active,
+.shoot.active,
+input.active {
+    display: none;
+}
+
+.descs {
+    display: none;
+    font-size: 20px !important;
+    margin: 5px auto -30px !important;
+}
+
+.follow-btn {
+    margin: auto;
+}
+
+.descs.active,
+.follow-btn.active {
+    display: block;
+}
+
+.material-symbols-outlined {
+    font-size: 20px !important;
+}
+
+.checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #28a745;
+    stroke-miterlimit: 10;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.checkmark:before,
+.checkmark:after {
+    content: '';
+    position: absolute;
+    background-color: #28a745;
+    border-radius: 5px;
+    transform-origin: left;
+}
+
+.checkmark:before {
+    width: 20px;
+    height: 5px;
+    left: 8px;
+    top: 29px;
+    transform: rotate(45deg) scaleX(0);
+    animation: checkmark-before 0.5s ease forwards;
+}
+
+.checkmark:after {
+    width: 35px;
+    height: 5px;
+    left: 20px;
+    top: 42px;
+    transform: rotate(-45deg) scaleX(0);
+    animation: checkmark-after 0.5s ease 0.25s forwards;
+}
+
+#confetti-holder {
+    position: fixed;
+    height: 100vh;
+    pointer-events: none;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#e0DQ82qcIov1 {
+    height: 150vh;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+#shooter {
+    font-weight: 500;
+    padding: 16px 32px;
+    min-width: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    color: rgba(250, 250, 255, 0.9);
+    background-color: #E64784;
+    border: none;
+    border-radius: 48px;
+    box-shadow: 0 4px 8px #F2B3C8;
+    -webkit-tap-highlight-color: transparent;
+    transition: box-shadow 0.1s ease-out;
+}
+
+#shooter:hover {
+    background-color: #F74D8D;
+    color: rgba(250, 250, 255, 1);
+    box-shadow: 0 8px 16px #F6CEDA;
+}
+
+#shooter:active {
+    box-shadow: 0 0 8px #F6CEDA;
+    transform: translateY(4px);
+    color: #fff;
+}
+
+span.shoot {
+    font-size: 28px;
+    text-align: center;
+    pointer-events: none;
+}
+
+#love {
+    position: fixed;
+    color: rgba(10, 0, 15, 0.48);
+    bottom: 1rem;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 1280px) {
+    .inner-wrap {
+        width: 95%;
+        position: relative;
+        height: 640px;
+    }
+
+    button {
+        width: 290px;
+    }
+
+    input {
+        width: 245px;
+    }
+
+    .waitlist-btn {
+        font-size: 13px;
+    }
+
+    .inner-wrap p.bold {
+        font-size: 17px;
+    }
+
+    button span {
+        left: 185px;
+    }
+
+    .inner-wrap>div:nth-child(2) {
+        width: 580px;
+    }
+
+    .inner-wrap p.desc {
+        font-size: 12px;
+        margin: -5px auto -1px;
+        line-height: 19px;
+    }
+
+    .descs {
+        line-height: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 1099px) {
+    .inner-wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .inner-wrap>div:nth-child(1) {
+        display: none;
+    }
+
+    .inner-wrap>div:nth-child(2) {
+        padding: 40px;
+    }
+
+    .waitlist-btn {
+        max-width: 290px;
+    }
+
+    .inner-wrap {
+        height: 700px;
+        max-width: 790px;
+    }
+
+    .inner-wrap p.desc {
+        font-size: 13px;
+    }
+
+    .inner-wrap>div:nth-child(2) {
+        max-width: 330px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .inner-wrap>div:nth-child(3) {
+        display: none;
+    }
+
+    .inner-wrap {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        padding: 60px 0;
+    }
+
+    button {
+        width: 295px;
+    }
+
+    .inner-wrap>div:nth-child(2) {
+        background-image: url(/assets/bg.gif);
+        background-position: center;
+        width: 100%;
+        position: relative;
+        max-width: 355px;
+    }
+
+    .waitlist-btn,
+    button {
+        background-color: #615cfa;
+    }
+
+    input {
+        background-color: #3e297e;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .inner-wrap>div:nth-child(2) {
+        max-width: 305px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .waitlist-btn {
+        max-width: 220px;
+        padding: 19px 16px 12px;
+        line-height: 15px;
+    }
+
+    input {
+        width: 205px;
+    }
+
+    button {
+        width: 257px;
+    }
+
+    button span {
+        left: 165px;
+    }
+
+    .inner-wrap p.bold {
+        font-size: 17px;
+        max-width: 200px;
+        line-height: 20px;
+        margin: 13px auto 0px;
+    }
+
+    .inner-wrap p.desc {
+        margin: 15px auto 0px;
+    }
+
+    .follow-btn {
+        width: 245px;
+    }
+
+    .inner-wrap>div:nth-child(2) {
+        max-width: 280px;
+        padding: 80px 30px;
+        margin: auto;
+    }
+
+    .inner-wrap {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .inner-wrap,
+    .container {
+        display: none;
+    }
+}
+
+:root {
+    --color-bg1: rgb(108, 0, 162);
+    --color-bg2: rgb(0, 17, 82);
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+
+.gradient-bg {
+    overflow: hidden;
+    top: 0;
+
+    svg {
+        display: none;
+    }
+
+
+    .gradients-container {
+        filter: url(#goo) blur(40px);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: fixed;
+        z-index: -2;
+    }
+
+    .g1 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+
+        opacity: 1;
+    }
+
+    .g2 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: calc(50% - 400px);
+        animation: moveInCircle 20s reverse infinite;
+
+        opacity: 1;
+    }
+
+    .g3 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2 + 200px);
+        left: calc(50% - var(--circle-size) / 2 - 500px);
+
+        transform-origin: calc(50% + 400px);
+        animation: moveInCircle 40s linear infinite;
+
+        opacity: 1;
+    }
+
+    .g4 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: calc(50% - 200px);
+        animation: moveHorizontal 40s ease infinite;
+
+        opacity: 0.7;
+    }
+
+    .g5 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: calc(var(--circle-size) * 2);
+        height: calc(var(--circle-size) * 2);
+        top: calc(50% - var(--circle-size));
+        left: calc(50% - var(--circle-size));
+
+        transform-origin: calc(50% - 800px) calc(50% + 200px);
+        animation: moveInCircle 20s ease infinite;
+
+        opacity: 1;
+    }
+
+    .interactive {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: 100%;
+        height: 100%;
+        top: -50%;
+        left: -50%;
+
+        opacity: 0.7;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .waitlist-btn,button {
+        background-color: #363395;
+    }
+}
