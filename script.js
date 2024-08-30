@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function confettiShooter() {
-    const inputs = document.querySelectorAll('#form input[required]'); // Select all required inputs in the form
-    let isValid = true; // Initialize isValid to true
-
-    // Check if all required inputs are filled
+    const inputs = document.querySelectorAll('#form input[required]'); 
+    let isValid = true;
     for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].value.trim() === "") {
-            isValid = false; // Mark as invalid if any required input is empty
+            isValid = false;
             break; // Exit the loop early if validation fails
         }
     }
@@ -21,11 +19,10 @@ function confettiShooter() {
                 const player = element.svgatorPlayer;
                 if (player && player.play) {
                     player.play();
-                    // Set form action and target attributes
                     $(".desc, .follow-btn, .shoot, input").addClass('active');
                     document.querySelector('.waitlist-btn').innerHTML = "Follow for Updates";
                     document.querySelector('.waitlist-btn').style.maxWidth = "230px";
-                    // $('#form').attr('action', 'https://www.instagram.com/').attr('target', '_blank');
+                    $('#form').attr('action', 'https://hookhubs.vercel.app/').attr('target', '_blank');
                 }
             });
         }
