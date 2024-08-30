@@ -22,7 +22,7 @@ function confettiShooter() {
                     $(".desc, .follow-btn, .shoot, input").addClass('active');
                     document.querySelector('.waitlist-btn').innerHTML = "Follow for Updates";
                     document.querySelector('.waitlist-btn').style.maxWidth = "230px";
-                    $('#form').attr('action', 'https://hookhubs.vercel.app/').attr('target', '_blank');
+                    $('#form').attr('action', '');
                 }
             });
         }
