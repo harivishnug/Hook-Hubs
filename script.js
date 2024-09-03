@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('submitBtn').addEventListener('click', function() {
+    document.getElementById('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form submission
         confettiShooter();
     });
 });
@@ -13,6 +14,12 @@ function confettiShooter() {
         }
     }
     if (isValid) {
+        $.ajax({
+            url: "https://api.apispreadsheets.com/data/AOCHVWMwYoHFIYyk/",
+            type: "post",
+            body: JSON.stringify({"data": {"Name":"value","Email":"value"}, "query": "select * from AOCHVWMwYoHFIYyk where Name='value'"}),
+            data: $("#form").serializeArray(),
+        });
         const element = document.getElementById('e0DQ82qcIov1');
         if (element) {
             element.svgatorPlayer.ready(function() {
