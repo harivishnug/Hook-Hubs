@@ -134,6 +134,21 @@ input.active {
 
 .follow-btn {
     margin: auto;
+    padding: 18px 20px 15px;
+    background-color: #021248;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 15px;
+    width: 300px;
+    color: #FD01FF;
+    position: relative;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: "Luckiest Guy", cursive;
+    letter-spacing: 1px;
 }
 
 .descs.active,
@@ -336,9 +351,10 @@ span.shoot {
     .inner-wrap>div:nth-child(2) {
         background-image: url(/assets/bg.gif);
         background-position: center;
-        width: 100%;
+        width: 80%;
         position: relative;
-        max-width: 355px;
+        max-width: 395px;
+        margin: 0 auto;
     }
 
     .waitlist-btn,
@@ -527,7 +543,7 @@ span.shoot {
         left: calc(50% - var(--circle-size) / 2 - 500px);
 
         transform-origin: calc(50% + 400px);
-        animation: moveInCircle 40s linear infinite;
+        animation: moveInCircle 5s linear infinite;
 
         opacity: 1;
     }
